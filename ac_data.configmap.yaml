@@ -5,5 +5,5 @@ metadata:
   labels:
     app: ac_data
 data:
-  postgres-db: postgres
+  postgres-db: pgdb
   postgres-port: "5432"
