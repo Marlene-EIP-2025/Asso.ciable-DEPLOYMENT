@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres
+  labels:
+    app: postgres
+data:
+  postgres-db: postgres
+  db_user: hostname
+  postgres-port: "5432"
