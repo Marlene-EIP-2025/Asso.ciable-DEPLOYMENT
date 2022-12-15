@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: service
+metadata:
+  name: front-service
+spec:
+  selector:
+    app: service
+  ports:
+  - port: 80
+    name: front
+    targetPort: front
