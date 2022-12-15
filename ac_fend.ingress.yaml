@@ -4,13 +4,13 @@ metadata:
   name: ac_fend
 spec:
   rules:
-  - host: asso-ciable.fr
+  - host: associable.fr
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: ac_bend
+            name: ac_fend
             port:
-              name: ac_bend
+              number: 80
