@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: front
+  name: ac_fend
 spec:
   rules:
   - host: asso-ciable.fr
@@ -11,6 +11,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: back
+            name: ac_bend
             port:
-              name: back
+              name: ac_bend

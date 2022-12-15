@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: front
+  name: ac_fend
 spec:
   restartPolicy: Always
   replicas: 1
   selector:
     matchLabels:
-      app: front
+      app: ac_fend
   template:
     metadata:
       labels:
-        app: front
+        app: ac_fend
     spec:
       containers:
-        - name: front
+        - name: ac_fend
           image: "gcr.io/google-samples/hello-frontend:1.0"
           lifecycle:
             preStop:

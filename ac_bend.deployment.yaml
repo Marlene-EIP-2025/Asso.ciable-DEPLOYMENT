@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: postgres
+  name: ac_bend
 spec:
   restartPolicy: Always
   replicas: 1
   selector:
     matchLabels:
-      app: postgres
+      app: ac_bend
   template:
     metadata:
       labels:
-        app: postgres
+        app:  ac_bend
     spec:
       containers:
-      - name: postgres
-        image: postgres:alpine
-        ports:
+        - name: ac_bend
+          image: "gcr.io/google-samples/hello-go-gke:1.0"
+          ports:
           - name: http
-            containerPort: 5432
+            containerPort: 80

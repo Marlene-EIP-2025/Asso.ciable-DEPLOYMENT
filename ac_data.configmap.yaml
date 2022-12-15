@@ -1,10 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: postgres
+  name: ac_data
   labels:
-    app: postgres
+    app: ac_data
 data:
   postgres-db: postgres
-  db_user: hostname
   postgres-port: "5432"
