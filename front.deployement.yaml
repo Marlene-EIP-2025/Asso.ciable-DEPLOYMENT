@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: default
-  name: result-deployment
+  name: front
 spec:
   restartPolicy: Always
   replicas: 1

@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: service
 metadata:
-  name: front-service
+  name: front
 spec:
   selector:
     app: front

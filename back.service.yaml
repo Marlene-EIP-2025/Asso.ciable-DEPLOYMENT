@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: service
 metadata:
-  name: back-service
+  name: back
 spec:
   selector:
     app: back

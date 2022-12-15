@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: default
-  name: back-deployment
+  name: back
 spec:
   restartPolicy: Always
   replicas: 1
@@ -16,9 +16,10 @@ spec:
     spec:
       containers:
         - name: back
-          image: IMAGE-POUET
+          image: "gcr.io/google-samples/hello-go-gke:1.0"
           ports:
-          - containerPort: 8080
+          - name: http
+            containerPort: 80
           resources:
             limits:
               memory: 256M

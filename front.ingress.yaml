@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Ingress
 metadata:
-  name: front-ingress
+  name: front
 spec:
   rules:
   - host: asso-ciable.fr
