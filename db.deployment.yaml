@@ -1,20 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: default
   name: db
 spec:
+  restartPolicy: Always
   replicas: 1
   selector:
     matchLabels:
       app: db
-  spec:
-    volumes:
-    - name: db-volume
-      persistentVolumeClaim:
-        claimName: postgres-pvc2
-    containers:
-    - name: db
-      image: postgres:alpine
-      ports:
-        - containerPort: 5432
+  template:
+    metadata:
+      labels:
+        app: db
+    spec:
+      containers:
+      - name: db
+        image: postgres:alpine
+        ports:
+          - name: http
+            containerPort: 5432
+      volumes:
+      - name: db-volume
+        persistentVolumeClaim:
+          claimName: postgres-pvc2
