@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: default
   name: front
 spec:
   restartPolicy: Always
@@ -16,9 +15,8 @@ spec:
     spec:
       containers:
         - name: front
-          image: "gcr.io/google-samples/hello-go-gke:1.0"
-          ports:
-          - containerPort: 8080
-          resources:
-            limits:
-              memory: 128M
+          image: "gcr.io/google-samples/hello-frontend:1.0"
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/usr/sbin/nginx","-s","quit"]
