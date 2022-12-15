@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: front
-          image: IMAGE-POUET
+          image: "gcr.io/google-samples/hello-go-gke:1.0"
           ports:
           - containerPort: 8080
           resources:

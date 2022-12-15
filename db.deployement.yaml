@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: Deployement
 metadata:
   namespace: default
-  name: postgres-deployement
+  name: db-deployement
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: postgres
+      app: db
   spec:
     volumes:
-    - name: postgres-volume
+    - name: db-volume
       persistentVolumeClaim:
         claimName: postgres-pvc2
     containers:
-    - name: postgres
+    - name: db
       image: postgres:alpine
       ports:
         - containerPort: 5432

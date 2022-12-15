@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: service
 metadata:
-  name: front-service
+  name: back-service
 spec:
   selector:
-    app: front
+    app: back
   ports:
   - port: 80
-    name: front
-    targetPort: front
+    name: back
+    targetPort: back
