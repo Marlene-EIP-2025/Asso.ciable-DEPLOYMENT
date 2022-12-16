@@ -7,8 +7,8 @@ spec:
   - host: associable.fr
     http:
       paths:
-      - path: /
-        pathType: Prefix
+      - pathType: Prefix
+        path: "/hello"
         backend:
           service:
             name: hello-app
