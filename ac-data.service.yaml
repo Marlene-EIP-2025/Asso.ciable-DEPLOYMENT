@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ac_data
+  name: ac-data
 spec:
   selector:
-    app: ac_data
+    app: ac-data
   ports:
   - port: 5432
     targetPort: 5432

@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ac_fend
+  name: ac-fend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ac_fend
+      app: ac-fend
   template:
     metadata:
       labels:
-        app: ac_fend
+        app: ac-fend
     spec:
       containers:
-        - name: ac_fend
+        - name: ac-fend
           image: "gcr.io/google-samples/hello-frontend:1.0"
           lifecycle:
             preStop:

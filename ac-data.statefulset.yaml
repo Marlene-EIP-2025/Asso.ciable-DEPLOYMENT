@@ -1,40 +1,40 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: ac_data
+  name: ac-data
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ac_data
+      app: ac-data
   template:
     metadata:
       labels:
-        app: ac_data
+        app: ac-data
     spec:
       containers:
-      - name: ac_data
+      - name: ac-data
         image: postgres:alpine
         ports:
           - name: http
             containerPort: 5432
         volumeMounts:
         - mountPath: /var/lib/postgresql/data
-          name: ac_data-pvc
+          name: ac-data-pvc
         env:
         - name: POSTGRES_DB
           configMapKeyRef:
-            name: ac_data
+            name: ac-data
             key: postgres-db
         - name: POSTGRES_USER
           secretKeyRef:
-            name: ac_data
+            name: ac-data
             key: postgres-user
         - name: POSTGRES_PASSWORD
           secretKeyRef:
-            name: ac_data
+            name: ac-data
             key: postgres-password
       volumes:
-      - name: ac_data-pvc
+      - name: ac-data-pvc
         persistantVolumeClaim:
-          claimName: ac_data-pvc
+          claimName: ac-data-pvc

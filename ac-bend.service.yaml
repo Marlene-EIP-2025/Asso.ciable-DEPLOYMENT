@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ac_bend
+  name: ac-bend
 spec:
   selector:
-    app: ac_bend
+    app: ac-bend
   ports:
   - protocol: TCP
     port: 80

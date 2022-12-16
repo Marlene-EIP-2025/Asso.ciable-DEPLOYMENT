@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ac_fend
+  name: ac-fend
 spec:
   selector:
-    app: ac_fend
+    app: ac-fend
   ports:
   - protocol: TCP
     port: 80

@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: ac_data-pvc
+  name: ac-data-pvc
 spec:
-  storageClassName: ac_data-sc
+  storageClassName: ac-data-sc
   accessModes:
   - ReadWriteOnce
   resources:
