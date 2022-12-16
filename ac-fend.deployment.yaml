@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ac-fend
-        image: "nginx"
+        image: "guilhemsante/forward-frontweb"
         ports:
         - name: http
-          containerPort: 80
+          containerPort: 8080

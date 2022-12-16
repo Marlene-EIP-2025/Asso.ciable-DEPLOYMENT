@@ -11,9 +11,9 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/hello"
+        path: "/"
         backend:
           service:
-            name: hello-app
+            name: ac-fend
             port:
               number: 8080
