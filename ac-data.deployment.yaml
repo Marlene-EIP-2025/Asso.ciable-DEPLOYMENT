@@ -16,5 +16,5 @@ spec:
       - name: ac-data
         image: postgres:alpine
         ports:
-          - name: http
-            containerPort: 5432
+        - name: http
+          containerPort: 5432
