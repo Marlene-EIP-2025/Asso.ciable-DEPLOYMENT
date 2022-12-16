@@ -13,8 +13,8 @@ spec:
         app: ac-fend
     spec:
       containers:
-        - name: ac-fend
-          image: "nginx"
+      - name: ac-fend
+        image: "nginx"
         ports:
         - name: http
           containerPort: 80

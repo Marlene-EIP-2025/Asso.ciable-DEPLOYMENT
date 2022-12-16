@@ -13,8 +13,8 @@ spec:
         app:  ac-bend
     spec:
       containers:
-        - name: ac-bend
-          image: "gcr.io/google-samples/hello-go-gke:1.0"
-          ports:
-          - name: http
-            containerPort: 80
+      - name: ac-bend
+        image: "gcr.io/google-samples/hello-go-gke:1.0"
+        ports:
+        - name: http
+          containerPort: 80
