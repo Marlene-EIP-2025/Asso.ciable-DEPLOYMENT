@@ -22,6 +22,19 @@ spec:
         volumeMounts:
         - mountPath: /var/lib/postgresql/data
           name: ac_data-pvc
+        env:
+        - name: POSTGRES_DB
+          configMapKeyRef:
+            name: ac_data
+            key: postgres-db
+        - name: POSTGRES_USER
+          secretKeyRef:
+            name: ac_data
+            key: postgres-user
+        - name: POSTGRES_PASSWORD
+          secretKeyRef:
+            name: ac_data
+            key: postgres-password
       volumes:
       - name: ac_data-pvc
         persistantVolumeClaim:
